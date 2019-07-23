@@ -1,0 +1,180 @@
+[
+	"items": 
+	[
+	  {
+		"Id": "037b2753-1d73-4c8c-a690-468de71d9013",
+		"Order": 0,
+		"InternalName": "State",
+		"DisplayName": "State",
+		"ColumnType": 5,
+		"ColumnAggregate": 0,
+		"Choices": {
+		  "Proposed": "Proposed",
+		  "Active": "Active",
+		  "Closed": "Closed"
+		},
+		"System": true,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "fbb20eab-ff19-4458-91ff-92e8151957ce",
+		"Order": 0,
+		"InternalName": "Priority",
+		"DisplayName": "Priority",
+		"ColumnType": 5,
+		"ColumnAggregate": 0,
+		"Choices": {
+		  "(1) High": "(1) High",
+		  "(2) Medium": "(2) Medium",
+		  "(3) Low": "(3) Low"
+		},
+		"System": true,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "1c04587a-5fa3-41f3-a715-e1981c6e869b",
+		"Order": 0,
+		"InternalName": "Budget",
+		"DisplayName": "Budget",
+		"ColumnType": 3,
+		"ColumnAggregate": 1,
+		"System": false,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "c6513aae-ff8a-48d9-ae30-6321b1affe69",
+		"Order": 0,
+		"InternalName": "TimesheetHours",
+		"DisplayName": "Timesheet Hours",
+		"ColumnType": 2,
+		"ColumnAggregate": 0,
+		"System": true,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "2d926019-7820-48cf-a3db-3663b9f03e06",
+		"Order": 0,
+		"InternalName": "TimesheetType",
+		"DisplayName": "Timesheet Type",
+		"ColumnType": 5,
+		"ColumnAggregate": 0,
+		"Choices": {
+		  "AssignmentOnly": "Assigned To Only",
+		  "OpenToTeam": "Open To Team",
+		  "OpenToEveryone": "Open To Everyone"
+		},
+		"System": true,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "5e02b368-4908-4c59-b65f-91c4e1042b4c",
+		"Order": 0,
+		"InternalName": "TimesheetChargeLevel",
+		"DisplayName": "Timesheet Charge",
+		"ColumnType": 5,
+		"ColumnAggregate": 0,
+		"Choices": {
+		  "ProjectLevel": "Project Level",
+		  "TaskLevel": "Task Level"
+		},
+		"System": true,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "6dc1e337-2473-4731-84d3-565061c56432",
+		"Order": 0,
+		"InternalName": "EstimatedStart",
+		"DisplayName": "Estimated Start",
+		"ColumnType": 1,
+		"ColumnAggregate": 0,
+		"System": false,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "ef0c829b-d4f3-47c7-b51c-2f25c0e50c8c",
+		"Order": 0,
+		"InternalName": "EstimatedEnd",
+		"DisplayName": "Estimated End",
+		"ColumnType": 1,
+		"ColumnAggregate": 0,
+		"System": false,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "00000000-0000-0000-0000-000000000000",
+		"Order": 0,
+		"InternalName": "Name",
+		"DisplayName": "Name",
+		"ColumnType": 0,
+		"ColumnAggregate": 0,
+		"System": true,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "00000000-0000-0000-0000-000000000000",
+		"Order": 0,
+		"InternalName": "Owner",
+		"DisplayName": "Owner",
+		"ColumnType": 0,
+		"ColumnAggregate": 0,
+		"System": true,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "00000000-0000-0000-0000-000000000000",
+		"Order": 0,
+		"InternalName": "StartDate",
+		"DisplayName": "Start",
+		"ColumnType": 0,
+		"ColumnAggregate": 0,
+		"System": true,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "00000000-0000-0000-0000-000000000000",
+		"Order": 0,
+		"InternalName": "EndDate",
+		"DisplayName": "End",
+		"ColumnType": 0,
+		"ColumnAggregate": 0,
+		"System": true,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  },
+	  {
+		"Id": "00000000-0000-0000-0000-000000000000",
+		"Order": 0,
+		"InternalName": "Effort",
+		"DisplayName": "Effort",
+		"ColumnType": 0,
+		"ColumnAggregate": 0,
+		"System": true,
+		"ReadOnly": false,
+		"Required": false,
+		"AllowAdditions": false
+	  }
+  ]
+]
