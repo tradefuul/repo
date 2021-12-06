@@ -1,0 +1,37 @@
+Xrm.WebApi.retrieveMultipleRecords("workflow", "?$filter=name eq 'Customer Onboarding'&$select=uniquename&$top=1")
+    .then(result => {
+        const workflowId = result.entities[0]["workflowid"];
+        return Xrm.WebApi.retrieveMultipleRecords("processstage", "?$select=stagename&$filter=processid/workflowid eq " + workflowId);
+    })
+    .then(result => {
+        var socioeconomicStatus = result.entities.find(stage => stage["stagename"] == "Socioeconomic Status");
+
+        if (activeStage.getId().toString() == socioeconomicStatus["processstageid"]) {
+            if (formContext.getAttribute("ava_netincome").getValue() == null && formContext.getAttribute("ava_investmentincome").getValue() == null && formContext.getAttribute("ava_otherincome").getValue() == null) {
+                formContext.ui.setFormNotification("At least one income value must be populated", "ERROR", "income_error"); //sets form notification in top of the form
+                executionContext.getEventArgs().preventDefault(); //prevent navigation to next stage
+            }
+            else {
+                formContext.ui.clearFormNotification("income_error");
+            }
+
+            if (formContext.getAttribute("ava_householdexpenses").getValue() == null && formContext.getAttribute("ava_otherexpenses").getValue() == null) {
+                formContext.ui.setFormNotification("At least one expense value must be populated", "ERROR", "expense_error"); //sets form notification in top of the form
+                executionContext.getEventArgs().preventDefault(); //prevent navigation to next stage
+            }
+            else {
+                formContext.ui.clearFormNotification("expense_error");
+            }
+
+            if (formContext.getAttribute("ava_currentloan").getValue() != null && formContext.getAttribute("ava_loanexpenses").getValue() == null) {
+                formContext.ui.setFormNotification("Loan expenses must be populated", "ERROR", "loan_error"); //sets form notification in top of the form
+                executionContext.getEventArgs().preventDefault(); //prevent navigation to next stage
+            }
+            else {
+                formContext.ui.clearFormNotification("loan_error");
+            }
+        }
+    })
+    .catch(error => {
+        console.log(error.message);
+    });
